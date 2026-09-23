@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jikai Jason Li — undergraduate researcher in computer science and statistics at the University of Toronto.">
+    <title>Jikai Jason Li</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <h1>Jikai Jason Li</h1>
+
+        <div class="profile">
+          <div class="profile-media">
+            <img
+              class="profile-photo"
+              src="JJL-thumbnail.jpeg"
+              alt="Jikai Jason Li"
+              width="800"
+              height="800"
+            >
+
+            <p class="profile-links" aria-label="Contact and profile links">
+              <a href="cv.html">CV</a> |
+              <a href="mailto:jasonnn404l@gmail.com">Email</a> |
+              <a href="https://github.com/jasonnn404">GitHub</a> |
+              <a href="https://linkedin.com/in/jikai-jason-li/">LinkedIn</a>
+            </p>
+          </div>
+
+          <div class="profile-copy">
+            <p>
+              I am an undergraduate student studying Computer Science and Statistics at the
+              <a href="https://www.utoronto.ca/">University of Toronto</a>. I am currently an
+              undergraduate research assistant in the Department of Computer Science,
+              advised by <a href="https://www.cs.toronto.edu/~fanl/">Prof. Fan Long</a>.
+            </p>
+
+            <p>
+              My current research focuses on LLM-based program optimization, from
+              multi-file C and C++ systems to high-performance GPU kernels.
+            </p>
+
+            <p>
+              <strong>Research interests:</strong> machine learning, reinforcement learning,
+              and ML systems and infrastructure.
+            </p>
+
+            <p>Email: jasonnn404l [AT] gmail.com</p>
+          </div>
+        </div>
+      </header>
+
+      <hr>
+
+      <section aria-labelledby="research-heading">
+        <h2 id="research-heading">Research</h2>
+
+        <article class="entry">
+          <h3>LLM Compiler Superoptimization</h3>
+          <p>
+            I am working on making LLM-based code optimization practical beyond isolated
+            functions. My work extends a compiler-superoptimization pipeline to multi-file
+            C and C++ programs and develops the search, verification, and evaluation
+            infrastructure needed to test changes safely at scale. The benchmark currently
+            covers 139 cases from 49 LLVM benchmark families, including the 87-file SPASS
+            theorem prover.
+          </p>
+          <p>
+            In an 11-workload study, I orchestrated 400 optimization attempts with 16
+            parallel search workers and four verifier agents. By sending verifiers only new
+            evidence and using their counterexamples to refine optimization constraints, I
+            reduced later prompt sizes by about 75% and improved aggregate speedup on the
+            targeted workloads from 1.07× to 1.24× while preserving correctness.
+          </p>
+        </article>
+      </section>
+
+      <hr>
+
+      <section aria-labelledby="preprints-heading">
+        <h2 id="preprints-heading">Preprints</h2>
+
+        <article class="publication">
+          <p>
+            <a class="paper-title" href="https://arxiv.org/abs/2604.01489">
+              CuTeGen: An LLM-Based Agentic Framework for Generation and Optimization of
+              High-Performance GPU Kernels using CuTe
+            </a>
+            <br>
+            Tara Saba, Zhiyang Chen, <strong>Jikai Jason Li</strong>, Anne Ouyang,
+            Xujie Si, Fan Long
+            <br>
+            <em>arXiv preprint; submitted to NeurIPS 2026</em>
+          </p>
+
+          <p>
+            CuTeGen studies how an agentic LLM workflow can generate and optimize CUDA/CuTe
+            kernels. My work centered on evaluation and debugging: I ran generated kernels
+            across 209 KernelBench tasks on remote NVIDIA GPUs and built tooling for
+            correctness validation, performance timing, token accounting, and failed-run
+            recovery. I also traced compilation failures, GPU crashes, and incorrect outputs
+            to precision, tensor-shape, and kernel implementation errors.
+          </p>
+        </article>
+      </section>
+
+      <hr>
+
+      <section aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+
+        <article class="entry">
+          <h3>TinyGPT</h3>
+          <p>
+            I built a decoder-only Transformer language model from scratch in PyTorch to
+            understand the full training stack, including causal multi-head attention,
+            positional embeddings, autoregressive generation, supervised fine-tuning,
+            checkpointing, and device-aware training.
+          </p>
+          <p>
+            I also implemented an end-to-end RLHF pipeline with a learned reward model,
+            frozen reference policy, value critic, batched rollouts, GAE, token-level KL
+            regularization, and clipped PPO updates. A 500-token BPE tokenizer compressed a
+            1.1-million-character corpus to 574,000 tokens (1.94×), and the evaluation tools
+            help surface reward-model failures, reward hacking, and exploration behavior.
+          </p>
+        </article>
+      </section>
+
+      <footer>
+        <p>
+          Website template from <a href="https://jonbarron.info/">here</a> and
+          <a href="https://tairanhe.com/">here</a>.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

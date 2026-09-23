@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Curriculum vitae of Jikai Jason Li.">
+    <title>CV — Jikai Jason Li</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="cv-page">
+    <header>
+      <h1>Jikai Jason Li</h1>
+      <p class="links">
+        <a href="index.html">Home</a><span>/</span>
+        <a href="mailto:jasonnn404l@gmail.com">Email</a><span>/</span>
+        <a href="https://github.com/jasonnn404">GitHub</a><span>/</span>
+        <a href="https://linkedin.com/in/jikai-jason-li/">LinkedIn</a>
+      </p>
+    </header>
+
+    <main>
+      <section aria-labelledby="cv-education">
+        <h2 id="cv-education">Education</h2>
+        <article class="entry">
+          <div class="entry-heading">
+            <h3>University of Toronto</h3>
+            <span class="date">September 2024–expected May 2028</span>
+          </div>
+          <p class="meta">Honours Bachelor of Science in Computer Science and Statistics · Toronto, Ontario</p>
+          <ul>
+            <li>Dean’s List Scholar.</li>
+            <li>Coursework: Machine Learning (CSC311), Databases (CSC343), and Software Engineering (CSC301).</li>
+          </ul>
+        </article>
+      </section>
+
+      <section aria-labelledby="cv-research">
+        <h2 id="cv-research">Research Experience</h2>
+        <article class="entry">
+          <div class="entry-heading">
+            <h3>Undergraduate Research Assistant, University of Toronto</h3>
+            <span class="date">April 2026–present</span>
+          </div>
+          <p class="meta">Department of Computer Science · Prof. Fan Long</p>
+
+          <h3>LLM Compiler Superoptimization</h3>
+          <ul>
+            <li>Built a benchmark pipeline for an LLM code optimizer and extended experiments to multi-file C/C++ programs, validating 139 cases across 49 LLVM benchmark families, including the 87-file SPASS theorem prover.</li>
+            <li>Ran 400 generated optimization attempts across 11 workloads using 16 parallel search workers and four verifier agents; automated correctness verification, failure handling, and result collection in AWS S3.</li>
+            <li>Reduced later verification prompt size by approximately 75% in a SPASS experiment by sending new evidence incrementally.</li>
+            <li>Used verifier counterexamples to revise optimization constraints, improving targeted aggregate speedup from 1.07× to 1.24× while preserving correctness.</li>
+          </ul>
+
+          <h3>LLM-Driven GPU Kernel Optimization (CuTeGen)</h3>
+          <ul>
+            <li>Third author on a NeurIPS 2026 submission on LLM-driven GPU kernel optimization using CUDA/CuTe; evaluated generated kernels across 209 KernelBench tasks on remote NVIDIA GPUs.</li>
+            <li>Built tooling for correctness checks, CUDA performance timing, token tracking, and recovery of failed optimization runs.</li>
+            <li>Debugged CUDA/CuTe kernels and PyTorch extensions, tracing compilation failures, GPU crashes, and incorrect outputs to precision, tensor-shape, and implementation errors.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section aria-labelledby="cv-experience">
+        <h2 id="cv-experience">Software Engineering Experience</h2>
+        <article class="entry">
+          <div class="entry-heading">
+            <h3>Web Developer, UofT Computer Science Student Union</h3>
+            <span class="date">August–October 2025</span>
+          </div>
+          <p>
+            Shipped TypeScript and React features for the CSSU website, serving a student
+            union representing more than 5,000 students, and collaborated in a five-person
+            team through GitHub pull requests and code reviews.
+          </p>
+        </article>
+      </section>
+
+      <section aria-labelledby="cv-projects">
+        <h2 id="cv-projects">Projects</h2>
+        <article class="entry">
+          <div class="entry-heading">
+            <h3>TinyGPT — LLM Training and RLHF from First Principles</h3>
+            <span class="date">August–September 2026</span>
+          </div>
+          <ul>
+            <li>Built a decoder-only Transformer in PyTorch with causal multi-head attention, positional embeddings, autoregressive generation, supervised fine-tuning, checkpointing, and device-aware training.</li>
+            <li>Developed an RLHF pipeline with a learned reward model, frozen reference policy, value critic, batched rollouts, GAE, token-level KL regularization, and clipped PPO updates.</li>
+            <li>Implemented a 500-token BPE tokenizer that compressed a 1.1-million-character corpus to 574,000 tokens (1.94×), with tools for analyzing policy likelihoods, reward-model failures, reward hacking, and exploration.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="skills" aria-labelledby="cv-skills">
+        <h2 id="cv-skills">Technical Skills</h2>
+        <p><strong>Languages:</strong> Python, C++, Java, TypeScript, SQL, C, Bash</p>
+        <p><strong>ML and agents:</strong> PyTorch, Transformers, RLHF, PPO, GAE, multi-agent systems, LLM evaluation</p>
+        <p><strong>GPU and systems:</strong> CUDA, CuTe/CUTLASS, Linux, CMake, AWS S3, SSH, Git/GitHub</p>
+        <p><strong>Web and data:</strong> React, Node.js, PostgreSQL, MongoDB</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Print this page from your browser to save a PDF copy.</p>
+    </footer>
+  </body>
+</html>
